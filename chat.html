@@ -20,11 +20,13 @@
         </div>
     </div>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <!-- Firebase SDKs (Modular Import) -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+        import { getDatabase, ref, push, onChildAdded } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js";
+        import { firebaseConfig } from "./chat.js";  // Your Firebase config and logic will be in chat.js
 
-    <!-- Chat Functionality -->
-    <script src="chat.js"></script>
+        // Call your chat logic from chat.js (modular)
+    </script>
 </body>
 </html>
